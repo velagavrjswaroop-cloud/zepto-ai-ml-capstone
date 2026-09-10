@@ -1,0 +1,36 @@
+﻿Example 1 — Policy Question
+
+Request:
+POST /ask
+
+{
+  "question": "How long does delivery take?"
+}
+
+Response:
+{
+  "answer": "Based on the retrieved context: doc_01 — Delivery Policy: \"Zepto delivers grocery and household essentials to serviceable pin codes within 10 to 30 minutes of order confirmation, depending on the customer's delivery zone and current",
+  "sources": [
+    "doc_01",
+    "doc_02",
+    "doc_04"
+  ],
+  "confidence": 1.0
+}
+
+
+Example 2 — General Question
+
+Request:
+POST /ask
+
+{
+  "question": "What is the capital of India?"
+}
+
+Response:
+{
+  "answer": "I can only answer questions about Zepto policies right now.",
+  "sources": [],
+  "confidence": 1.0
+}
